@@ -1,2 +1,34 @@
-# cn-web-leyusports-com-cn
-乐鱼体育 - https://cn-web-leyusports.com.cn
+# 乐鱼体育 - 官方网站
+
+欢迎访问 **乐鱼体育**，一个专注于体育资讯与娱乐服务的在线平台。本仓库用于介绍和指向官方网站 [https://cn-web-leyusports.com.cn](https://cn-web-leyusports.com.cn)。
+
+## 简介
+
+**乐鱼体育** 致力于为体育爱好者提供丰富的赛事信息、实时比分、体育新闻以及相关互动服务。通过 [https://cn-web-leyusports.com.cn](https://cn-web-leyusports.com.cn)，用户可以便捷地获取全球各类体育项目的动态，并参与健康、积极的体育交流。
+
+## 主要特点
+
+- **全面体育覆盖**：涵盖足球、篮球、网球、电竞等多种热门体育项目。
+- **实时资讯更新**：提供最新的比赛结果、赛程安排和深度分析内容。
+- **用户友好界面**：网站设计简洁直观，便于快速浏览和查找信息。
+- **稳定访问体验**：依托 [https://cn-web-leyusports.com.cn](https://cn-web-leyusports.com.cn) 提供可靠的在线服务。
+
+## 访问方式
+
+您可以通过以下方式直接访问 **乐鱼体育**：
+
+- **官方网站**：[https://cn-web-leyusports.com.cn](https://cn-web-leyusports.com.cn)
+
+请确保使用最新版本的浏览器，以获得最佳浏览效果。
+
+## 注意事项
+
+- 本仓库仅作为信息指引，不存储或分发任何违规内容。
+- 请遵守当地法律法规，合理使用网络资源。
+- 如遇访问问题，建议检查网络连接或联系网站管理员。
+
+## 贡献
+
+如果您发现网站链接或信息有误，欢迎提交 Issue 或 Pull Request 进行修正。
+
+感谢您对 **乐鱼体育** 的关注！

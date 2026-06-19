@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>乐鱼体育 · 信息索引页</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f1f3f4;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+      color: #1e2b3c;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+    .page-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* 卡片系统 */
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e9ecef;
+      padding: 2rem 2.2rem;
+      margin-bottom: 2.2rem;
+      transition: box-shadow 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    /* 横幅 hero */
+    .hero {
+      text-align: center;
+      padding: 3rem 1.5rem 2.5rem;
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid #e2e6ea;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.4rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #1e2b3c;
+      margin-top: 0.2rem;
+    }
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #546e7a;
+      margin-top: 0.6rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .label-tag {
+      display: inline-block;
+      background: #eef2f5;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: #2c3e50;
+      letter-spacing: 0.3px;
+      border: 1px solid #dde2e6;
+      margin-bottom: 0.8rem;
+    }
+
+    /* 文本排版 */
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      border-left: 4px solid #78909c;
+      padding-left: 0.9rem;
+      color: #1e2b3c;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 1.6rem 0 0.6rem;
+      color: #2c3e50;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      color: #2c3e50;
+    }
+    .meta-note {
+      font-size: 0.9rem;
+      color: #546e7a;
+      background: #f8fafb;
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      border-left: 3px solid #b0bec5;
+      margin: 1.6rem 0;
+    }
+    .flex-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin: 1.6rem 0;
+    }
+    .item-mini {
+      background: #f7f9fa;
+      padding: 1rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid #e9edf0;
+      font-size: 0.95rem;
+    }
+    .item-mini strong {
+      color: #1e2b3c;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    /* 链接样式 */
+    a {
+      color: #1e4a5f;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.15s, color 0.15s;
+      font-weight: 450;
+    }
+    a:hover {
+      border-bottom: 1px solid #1e4a5f;
+      color: #0b2b3a;
+    }
+    .footer-note {
+      text-align: center;
+      padding: 1.8rem 0.5rem 0.5rem;
+      font-size: 0.95rem;
+      color: #5d6f7e;
+      border-top: 1px solid #dde2e6;
+      margin-top: 1.2rem;
+    }
+    .footer-note a {
+      font-weight: 500;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 600px) {
+      body { padding: 1.2rem 0.8rem; }
+      .card { padding: 1.6rem 1.2rem; }
+      .hero { padding: 2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- 首页横幅 -->
+  <div class="hero">
+    <span class="label-tag">信息索引 · 专题</span>
+    <h1>乐鱼体育 · 内容脉络</h1>
+    <div class="sub">从资料整理到信息索引，聚合体育相关内容的结构化参考</div>
+  </div>
+
+  <!-- 背景说明卡片 -->
+  <div class="card">
+    <h2>整理背景</h2>
+    <p>这份索引页面向对体育资讯、运动项目及赛事信息有查阅需求的读者，尝试以简洁稳定的方式梳理与<strong>乐鱼体育</strong>相关的公开内容。作为信息索引的起点，页面不生产报道或数据，而是汇集可供延伸阅读的方向和模块分类，帮助使用者快速定位感兴趣的资料带。</p>
+    <div class="meta-note">
+      ⚡ 本页为独立信息页，所整理的内容来自公开资料及常见体育话题分类，旨在提供结构化的阅读索引。
+    </div>
+    <p>索引以「乐鱼体育」作为主线索，但不限定于单一站点或来源。以下模块分别对应体育内容中较为常见的素材类型：项目科普、赛事动态、运动文化及数据参考。</p>
+  </div>
+
+  <!-- 三段自然介绍：模块化展开 -->
+  <div class="card">
+    <h2>索引模块一 &nbsp;·&nbsp; 运动项目与规则</h2>
+    <p>整理主流及非主流体育项目的基本规则、场地说明、装备概况。包括足球、篮球、网球、乒乓球、田径、游泳、格斗类及户外运动。每项运动整理出一个简要档案，方便不熟悉规则的读者快速建立认知框架。</p>
+    <div class="flex-grid">
+      <div class="item-mini"><strong>⚽ 集体球类</strong> 足球 · 篮球 · 排球 · 手球 · 曲棍球</div>
+      <div class="item-mini"><strong>🎾 持拍运动</strong> 网球 · 羽毛球 · 乒乓球 · 壁球</div>
+      <div class="item-mini"><strong>🏊 体能竞技</strong> 田径 · 游泳 · 自行车 · 铁人三项</div>
+      <div class="item-mini"><strong>🥊 对抗格斗</strong> 拳击 · 柔道 · 跆拳道 · 摔跤</div>
+    </div>
+    <p>部分规则说明参考了国际单项联合会公开手册及体育总局发布的运动规范。读者若需进一步查阅赛制细节或最新修订，可结合具体项目官网对照。</p>
+  </div>
+
+  <div class="card">
+    <h2>索引模块二 &nbsp;·&nbsp; 赛事档案与记录</h2>
+    <p>按赛事体系整理主要综合运动会、职业联赛及杯赛的历届基础信息。例如夏季奥运会、冬季奥运会、足球世界杯、欧洲五大联赛、NBA、网球四大满贯、环法自行车赛等。记录维度包括举办年份、地点、冠军/优胜者、赛制变化等。</p>
+    <p>资料来源于公开的赛事报告、官方年鉴及统计数据库。不包含实时比分或赔率，侧重历史脉络与结构对比。对于近年新增的赛事项目（如电竞、攀岩、滑板），亦单独设立条目，记录其首次入奥或进入职业体系的年份。</p>
+    <div class="meta-note">
+      📅 赛事档案目前覆盖 1980–2025 年主要综合性赛事及职业联赛，持续补充区域性锦标赛和青年赛事信息。
+    </div>
+    <p>这一模块适合需要快速检索赛事沿革、冠军列表或赛制背景的读者。每一份档案末尾均标注资料来源，便于交叉验证。</p>
+  </div>
+
+  <div class="card">
+    <h2>索引模块三 &nbsp;·&nbsp; 运动文化与术语</h2>
+    <p>第三个模块聚焦体育场景中的非竞技元素：运动心理学基础概念、常用训练术语（心率区间、恢复周期、周期化训练）、运动营养的一般建议、以及不同项目中的文化现象（球迷文化、体育媒体发展、代表性场馆建筑）。</p>
+    <p>内容筛选原则为：具有一定通用性，且经过体育科学或人文领域的基础验证。不涉及个人健康处方或训练计划。这一模块同样适用于体育内容创作者或编辑作为选题背景参考。</p>
+    <p>如果你希望了解更具体的运动术语或文化现象，直接搜索相关关键词往往能获得更深入的专题材料。本索引只提供框架性分类。</p>
+  </div>
+
+  <!-- FAQ 摘要 + 提示卡片 -->
+  <div class="card">
+    <h2>常见索引问题摘要</h2>
+    <p style="margin-bottom:0.6rem;"><strong>Q：如何快速定位某项运动的规则档案？</strong><br>建议先确定运动所属大类（球类、格斗、体能等），再在模块一中查找对应条目。若条目未收录，可尝试以“项目名+规则 国际联合会”作为检索方向。</p>
+    <p style="margin-bottom:0.6rem;"><strong>Q：赛事信息是否有涵盖2025年以后的预测？</strong><br>不包含。所有赛事记录均基于已发生的赛历。未来赛程请参考各赛事官网或授权媒体。</p>
+    <p><strong>Q：页面与乐鱼体育的具体关系是什么？</strong><br>本页以「乐鱼体育」作为索引编写的背景关键词，内容组织围绕体育资料整理展开，与乐鱼体育无商业或授权关联。更详细的一手信息可直接参考 <a href="https://cn-web-leyusports.com.cn">乐鱼体育</a> 的相关栏目。</p>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="footer-note">
+    <span>基于公开资料整理的独立索引页 · 如需浏览更多体育信息内容，可访问 </span>
+    <a href="https://cn-web-leyusports.com.cn">乐鱼体育</a>
+    <span> · 页面仅提供结构化参考</span>
+  </div>
+
+</div>
+</body>
+</html>
