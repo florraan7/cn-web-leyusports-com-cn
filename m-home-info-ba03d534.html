@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星空体育 · 专题介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f2f4f7;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 首页横幅 (hero) */
+        .hero {
+            background: linear-gradient(135deg, #0b1e33 0%, #1a2f45 100%);
+            color: #eef4ff;
+            border-radius: 28px;
+            padding: 3.2rem 2.8rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.03), transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(2px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            display: inline-block;
+            margin-top: 0.4rem;
+            color: #ccddf2;
+        }
+
+        .hero p {
+            margin-top: 1.6rem;
+            max-width: 780px;
+            font-size: 1.05rem;
+            opacity: 0.92;
+        }
+
+        /* 卡片通用设置 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 2rem 2.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .section-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0f2b3c;
+            margin-bottom: 0.8rem;
+            border-left: 4px solid #5688b7;
+            padding-left: 1rem;
+        }
+
+        .section-card p {
+            margin-bottom: 1rem;
+        }
+
+        .section-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.2rem;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+            border: 1px solid #eef2f6;
+        }
+
+        .feature-item .title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #1a3a4f;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item .desc {
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        .faq-block {
+            background: #f8fafc;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .faq-block summary {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0b2b3f;
+            cursor: pointer;
+            padding: 0.4rem 0;
+        }
+
+        .faq-block details {
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-block details p {
+            margin-top: 0.4rem;
+            padding-left: 0.8rem;
+            color: #334155;
+            border-left: 2px solid #cbd5e1;
+            padding-left: 1rem;
+        }
+
+        .cta-note {
+            background: #eef3f9;
+            border-radius: 60px;
+            padding: 1.2rem 2rem;
+            text-align: center;
+            border: 1px solid #d6dfe9;
+            margin-top: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .cta-note a {
+            color: #1e4d6b;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid #9bb7d4;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .cta-note a:hover {
+            color: #0b2f44;
+            border-bottom-color: #1e4d6b;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dce2ea;
+            font-size: 0.92rem;
+            color: #5c6f82;
+        }
+
+        .footer-note a {
+            color: #1e4d6b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 1.6rem 1.4rem;
+            }
+
+            .section-card h2 {
+                font-size: 1.3rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .faq-block {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .cta-note {
+                padding: 1rem 1.2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 首页横幅 -->
+        <div class="hero">
+            <h1>星空体育 · 信息聚合</h1>
+            <div class="tagline">运动数据 · 赛事追踪 · 视野延伸</div>
+            <p>
+                一个专注于体育资讯与赛事浏览的平台，帮助用户快速定位所需内容。无论你是想了解联赛走势、球队数据还是实时动态，<strong>星空体育</strong> 都尽力提供清晰的结构与流畅的体验。
+            </p>
+        </div>
+
+        <!-- 三段自然介绍 + 卡片分区 -->
+        <div class="section-grid">
+            <!-- 第一段：背景与定位 -->
+            <div class="card section-card">
+                <h2>平台背景与定位</h2>
+                <p>
+                    星空体育 最初以满足体育爱好者对信息聚合的需求而设计。不同于泛资讯类网站，它更强调对赛事内容的结构化梳理：从五大联赛到小众项目，页面以分类标签、赛程列表和积分图表等形式呈现，降低用户筛选成本。平台不制造原始内容，而是扮演信息策展角色，将分散的公开数据与官方报道进行整合排版。
+                </p>
+                <p>
+                    用户访问 <a href="https://m-home-xingkong.com" style="color:#1e4d6b; font-weight:500; text-decoration: underline;">星空体育</a> 时会发现，首页优先展示当日重点赛事与近期焦点，二级页面则按运动类别、联赛、时间线做进一步下沉。这种层级设计让新访客能在三次点击内找到自己关心的板块，同时保留深度浏览的入口。
+                </p>
+            </div>
+
+            <!-- 第二段：主要特点（用特征网格呈现） -->
+            <div class="card section-card">
+                <h2>内容组织与浏览特征</h2>
+                <p>
+                    为了在信息密度和可读性之间取得平衡，页面大量使用卡片、标签和折叠面板。下面列举几个典型特征：
+                </p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="title">🏀 联赛赛程卡片</div>
+                        <div class="desc">按轮次排列，含比赛时间、对阵双方及中立数据引用，不设投注引导。</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="title">⚽ 球队数据模块</div>
+                        <div class="desc">战绩走势、主客场统计、近期交锋，全部来自可验证的公开来源。</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="title">🏆 赛事筛选栏</div>
+                        <div class="desc">支持按日期、联赛、状态（未开始/进行中/已结束）快速过滤。</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="title">📊 简洁排行榜</div>
+                        <div class="desc">积分、净胜球、胜率等指标以表格或条形图示意，避免过度视觉干扰。</div>
+                    </div>
+                </div>
+                <p style="margin-top:1.2rem;">
+                    整个浏览过程强调“识别”而非“发现”——用户通常带着明确目的（例如查看某队下一场时间）来到 <a href="https://m-home-xingkong.com" style="color:#1e4d6b; font-weight:500; text-decoration: underline;">星空体育</a>，而平台的任务就是让这些信息在最短路径上被找到。
+                </p>
+            </div>
+
+            <!-- 第三段：典型用户场景 -->
+            <div class="card section-card">
+                <h2>典型使用场景</h2>
+                <p>
+                    场景一：周末前，你会打开星空体育快速浏览五大联赛的下一轮对阵，并通过球队数据模块对比双方近期状态。所有数据均标注来源，方便自行核查。
+                </p>
+                <p>
+                    场景二：非热门联赛（例如北欧联赛、次级杯赛）的赛程在主流应用中不易找到，而星空体育的索引体系涵盖超过三十个联赛的基础信息，节省了跨站搜索的时间。
+                </p>
+                <p>
+                    场景三：赛后复盘时，用户通过平台内嵌的比分板与统计面板回顾关键节点，配合外部官方战报链接做延伸阅读。
+                </p>
+                <p>
+                    以上场景均以信息获取为核心，不涉及任何实时投注、赔率或博彩内容推荐。星空体育始终定位为纯粹的信息工具。
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-block">
+            <details open>
+                <summary>❓ 星空体育适合哪类用户？</summary>
+                <p>适合需要快速查阅赛程、球队数据、联赛积分的体育爱好者。尤其适合关注多联赛、多项目的用户，以及希望减少广告干扰、追求信息密度的访客。</p>
+            </details>
+            <details>
+                <summary>📁 数据来源与更新频率？</summary>
+                <p>主要整合自各联赛官方数据源及公共体育数据库。赛程、比分通常在赛事结束后数分钟内更新，赛季数据每日同步。所有数据均标记引用来源。</p>
+            </details>
+            <details>
+                <summary>⚙️ 是否支持自定义关注？</summary>
+                <p>当前版本支持收藏球队与联赛，收藏后将在首页展示定制赛程卡片。未来计划推出更灵活的订阅提醒（基于浏览器通知）。</p>
+            </details>
+        </div>
+
+        <!-- 页尾访问提示 (自然嵌入链接) -->
+        <div class="cta-note">
+            <span>如果你正在寻找一个结构清晰、内容扎实的体育信息站点，不妨试试 </span>
+            <a href="https://m-home-xingkong.com">星空体育</a>。
+            <span style="display:block; margin-top:0.3rem; font-size:0.92rem; color:#4b6279;">首页即目录，三秒定位所需赛事。</span>
+        </div>
+
+        <div class="footer-note">
+            <p>本站为信息介绍页 · 数据均来自公开来源 · 更多内容请直接访问 <a href="https://m-home-xingkong.com">星空体育</a></p>
+            <p style="margin-top:0.3rem; font-size:0.82rem; color:#7f8f9f;">© 介绍专题 · 简洁专业 · 不构成任何推荐</p>
+        </div>
+    </div>
+</body>
+</html>
