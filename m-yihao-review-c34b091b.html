@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>壹号娱乐 · 知识速查</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f4f6fa;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    /* 深色头图 – 分割感强 */
+    .hero {
+      background: linear-gradient(135deg, #0b1120 0%, #1b2a44 100%);
+      color: #e7edf5;
+      padding: 5rem 2rem 3.5rem;
+      text-align: center;
+      border-bottom: 6px solid #5f8fce;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      margin-top: 1.8rem;
+      background: #5f8fce;
+      color: #0b1120;
+      padding: 0.2rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* 正文区浅色，卡片式分割 */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      border-left: 5px solid #5f8fce;
+      padding-left: 1rem;
+      margin-bottom: 1.8rem;
+      color: #0f1a2e;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 1.8rem 1.8rem 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: #162b44;
+    }
+
+    .card p, .card li {
+      font-size: 0.98rem;
+      color: #334155;
+    }
+
+    .card ul {
+      padding-left: 1.3rem;
+      margin-top: 0.3rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.35rem;
+    }
+
+    .accent-link {
+      color: #1f5f9e;
+      text-decoration: none;
+      border-bottom: 1px solid #b3cbe6;
+      transition: border-color 0.15s, color 0.15s;
+      font-weight: 450;
+    }
+
+    .accent-link:hover {
+      color: #0b3b6b;
+      border-bottom-color: #1f5f9e;
+    }
+
+    .tip-box {
+      background: #eaf1fc;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0 2.8rem;
+      border: 1px solid #d3e2f5;
+    }
+
+    .tip-box .tip-title {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #0f2a48;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-mini {
+      margin-top: 1rem;
+    }
+
+    .faq-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed #d3dae8;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1f3a5c;
+      font-size: 1rem;
+    }
+
+    .faq-a {
+      font-size: 0.95rem;
+      color: #2c3e5c;
+      margin-top: 0.15rem;
+      padding-left: 0.2rem;
+    }
+
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      background: white;
+      border-radius: 18px;
+      padding: 1.5rem 2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .info-row span {
+      font-size: 0.95rem;
+      color: #2d3f5a;
+    }
+
+    .info-row strong {
+      font-weight: 500;
+      color: #0b203a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 1.8rem;
+      font-size: 0.85rem;
+      color: #6a7b93;
+      border-top: 1px solid #dde3ed;
+      margin-top: 2rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 2.1rem; }
+      .grid-2col { grid-template-columns: 1fr; gap: 1.5rem; }
+      .container { padding: 1.8rem 1.2rem 3rem; }
+      .card { padding: 1.4rem; }
+      .tip-box { padding: 1.3rem; }
+      .info-row { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>壹号娱乐 · 信息速览</h1>
+    <p class="sub">日常查询、对照参考与延伸阅读 —— 把零散知识整理成趁手的索引</p>
+    <span class="badge">知识库入口 · 目录式浏览</span>
+  </header>
+
+  <div class="container">
+
+    <!-- 卡片双栏：介绍 + 特点（目录感） -->
+    <div class="grid-2col">
+      <div class="card">
+        <h3>📖 平台简介</h3>
+        <p><a href="https://m--yihao.com" class="accent-link">壹号娱乐</a> 是一个综合性的数字内容平台，面向日常资讯查询、玩法对照以及主题延伸阅读。无论是快速检索某一类信息，还是系统了解相关背景，都可以从这里出发。</p>
+        <p style="margin-top:0.6rem;">页面结构仿照知识库目录，将不同维度的内容分块陈列，便于对照和跳转。</p>
+      </div>
+      <div class="card">
+        <h3>🧭 特点速览</h3>
+        <ul>
+          <li>分类清晰，按主题/类型组织内容块</li>
+          <li>信息呈现偏重实用性与可查性</li>
+          <li>保持更新节奏，内容来源多元</li>
+          <li>页面布局适配手机与桌面阅读</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 提示区（tip box）带 FAQ 摘要 -->
+    <div class="tip-box">
+      <div class="tip-title">💡 使用提示</div>
+      <p>建议将常用分类加入浏览器书签，方便日常对照。部分内容会随版本迭代调整，若发现信息出入，可参考站内相关说明页。延伸阅读区会不定期补充背景材料。</p>
+      <div class="faq-mini">
+        <div class="faq-item">
+          <div class="faq-q">❓ 如何快速定位感兴趣的主题？</div>
+          <div class="faq-a">首页采用目录式区块，每个卡片代表一类内容。你也可以直接使用站点搜索（若可用）或按标签筛选。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">❓ 信息准确度如何？</div>
+          <div class="faq-a">平台尽力保证内容经过整理与校对，但涉及主观解读或动态数据时，建议交叉验证。你随时可以通过相关渠道反馈修订。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 相关信息区：场景举例 + 延伸说明 -->
+    <div>
+      <div class="section-title">📌 常见查询场景</div>
+      <div class="grid-2col" style="margin-bottom:0;">
+        <div class="card">
+          <h3>🔍 日常对照</h3>
+          <p>对比不同分类下的条目差异、查看版本记录或术语定义。例如在<a href="https://m--yihao.com" class="accent-link">壹号娱乐</a>中查阅某一玩法类型的横向对比，几秒内即可定位到对应卡片。</p>
+        </div>
+        <div class="card">
+          <h3>📚 延伸阅读</h3>
+          <p>每个主要区块下方会附带“延伸参考”链接，指向更详细的专题文章或外部资料（如有）。适合需要深入了解背景的用户。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 附加信息行：类似知识库脚注 -->
+    <div class="info-row">
+      <span><strong>内容方向</strong> 资讯 · 对照 · 延伸</span>
+      <span><strong>更新周期</strong> 不定期修订</span>
+      <span><strong>建议终端</strong> 全平台</span>
+    </div>
+
+    <footer>
+      <p>基于公开信息整理 · 内容仅供参考 · 具体以实际页面为准</p>
+      <p style="margin-top: 0.4rem;">—— 知识库入口 ——</p>
+    </footer>
+  </div>
+</body>
+</html>
